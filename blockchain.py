@@ -9,7 +9,7 @@ class NinjaBlock:
         self.data_list = data_list
         self.previous_block_hash = previous_block_hash
 
-        self.block_data = '|' + "-".join(data_list) + "-" + previous_block_hash + '|' # '|' and '-' are identifiers of the block,not necessary use any or not.
+        self.block_data = '|' + "-".join(data_list) + "-" + previous_block_hash + '|'     # '|' and '-' are identifiers of the block,not necessary use any or not.
         self.block_hash = sha256(self.block_data.encode()).hexdigest()
 
 data1 = 'BlockChain created'
@@ -25,30 +25,3 @@ data5 = 'Feeding Data'
 data6 = 'Second Block Complete'
 
 second_block = NinjaBlock([data4,data5,data6],first_block.block_hash)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
